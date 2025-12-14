@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trifthing Nusantara</title>
+
+  <!-- CSS DI DALAM HTML -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #8c2929;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* BERANDA */
+    .beranda {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+      url('https://images.unsplash.com/photo-1521334884684-d80222895322') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(231, 0, 0);
+    }
+
+    .beranda h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .beranda span {
+      color: #ffb3b3;
+    }
+
+    .beranda p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #8c2929;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #a83838;
+    }
+
+    /* TENTANG */
+    .tentang {
+      padding: 80px 20px;
+      background: white;
+      text-align: center;
+    }
+
+    .tentang h1 {
+      margin-bottom: 15px;
+    }
+
+    .tentang p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    /* PRODUK */
+    .produk-section {
+      padding: 80px 20px;
+      background: #f0f0f0;
+      text-align: center;
+    }
+
+    .produk-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .produk {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    }
+
+    .produk img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .produk h3 {
+      margin: 15px 0 5px;
+    }
+
+    .produk button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      background: #8c2929;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .produk button:hover {
+      background: #a83838;
+    }
+
+    /* PESANAN */
+    .pesanan {
+      padding: 80px 20px;
+      background: white;
+      text-align: center;
+    }
+
+    .pesanan form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .pesanan input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    .pesanan button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background: #8c2929;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    /* KONTAK */
+    .kontak {
+      padding: 80px 20px;
+      background: #f0f0f0;
+      text-align: center;
+    }
+
+    .kontak form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .kontak input,
+    .kontak textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .kontak button {
+      width: 100%;
+      padding: 10px;
+      background: #8c2929;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #8c2929;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Trifthing Nusantara</div>
+    <ul>
+      <li><a href="#Beranda">Beranda</a></li>
+      <li><a href="#Produk">Produk</a></li>
+      <li><a href="#Tentang">Tentang</a></li>
+      <li><a href="#Kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <div class="seluruh">
+    <!-- BERANDA -->
+  <section id="Beranda" class="beranda">
+    <div class="beranda-content">
+      <h1>Selamat Datang di <span>Toko Trifthing</span></h1>
+      <p>Tentukan Gayamu</p>
+      <a href="#Produk" class="btn">Belanja Sekarang</a>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section id="Tentang" class="tentang">
+    <div class="tentang-overlay">
+      <div class="tentang-content">
+        <h1>Tentang Kami</h1>
+        <p><strong>Trifthing Nusantara adalah toko Baju & Aksesoris bekas berKualitas Tinggi yang di import dari luar negeri.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK -->
+  <section id="Produk" class="produk-section">
+    <h1>Daftar Produk</h1>
+    <div class="produk-list">
+      <div class="produk">
+        <img src="https://levi.co.id/cdn/shop/files/levis-mens-578-baggy-jeans-A47500044_3_CM_FV_e928b1bd-c1d3-4f67-aa35-41069e54b737_3558X2000.progressive.jpg?v=1750404244" alt="Celana Baggy">
+        <h3>Baggy Jeans</h3>
+        <p>Rp 578.980</p>
+        <button>Beli Sekarang</button>
+      </div>
+
+      <div class="produk">
+        <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rd68-luyq5ncrc5ay19" alt="Kaos Boxy">
+        <h3>Boxxy Shirt</h3>
+        <p>Rp 159.999</p>
+        <button>Beli Sekarang</button>
+      </div>
+
+      <div class="produk">
+        <img src="https://i.pinimg.com/originals/8c/c7/2a/8cc72a121d156683b066eee575f71ca5.jpg" alt="Jaket Distro">
+        <h3>Jaket Adidas</h3>
+        <p>Rp 99.999</p>
+        <button>Beli Sekarang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM PESANAN -->
+  <section id="Pesanan" class="pesanan">
+    <h1>Form Pesanan</h1>
+    <p>Isi data berikut untuk melanjutkan pembelian.</p>
+
+    <form id="formPesanan" onsubmit="prosesPesanan(event)">
+      <label>Nama Produk:</label><br>
+      <input type="text" id="namaProduk" readonly required><br><br>
+
+      <label>Harga:</label><br>
+      <input type="text" id="hargaProduk" readonly required><br><br>
+
+      <label>Jumlah:</label><br>
+      <input type="number" id="jumlah" min="1" value="1" required><br><br>
+
+      <button type="submit">Hitung Total</button>
+    </form>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="Kontak" class="kontak">
+    <h1>Hubungi Kami</h1>
+    <p>Jika ada pertanyaan atau ingin kerja sama, silakan hubungi kami melalui form di bawah ini.</p>
+    
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Nama Anda" required>
+      <input type="email" placeholder="Email Anda" required>
+      <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Trifthing Nusantara — Kualitas Sultan Harga Merakyat 💫
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+  // Alert pada form kontak
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert("Terima Kasih atas sarannya!");
+  }
+
+  // Format ke Rupiah
+  function formatRupiah(angka) {
+    return "Rp " + angka.toLocaleString("id-ID");
+  }
+
+  // Ketika tombol beli ditekan → kirim data ke form
+  document.querySelectorAll(".produk button").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      const produk = document.querySelectorAll(".produk")[index];
+
+      const nama = produk.querySelector("h3").innerText;
+      const hargaText = produk.querySelector("p").innerText.replace(/[^0-9]/g, "");
+      const harga = parseInt(hargaText);
+
+      document.getElementById("namaProduk").value = nama;
+      document.getElementById("hargaProduk").value = formatRupiah(harga);
+
+      location.href = "#Pesanan";
+    });
+  });
+
+  // Proses pesanan → alert + reset + kembali ke beranda
+  function prosesPesanan(event) {
+    event.preventDefault();
+
+    const harga = parseInt(document.getElementById("hargaProduk").value.replace(/[^0-9]/g, ""));
+    const jumlah = parseInt(document.getElementById("jumlah").value);
+    const total = harga * jumlah;
+
+    alert("Total belanja Anda: " + formatRupiah(total));
+
+    // Reset form setelah alert
+    document.getElementById("formPesanan").reset();
+
+    // Kembali ke beranda
+    location.href = "#Beranda";
+  }
+
+  </script>
+  </div>
+
+</body>
+</html>
